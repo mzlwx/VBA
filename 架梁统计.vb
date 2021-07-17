@@ -7,10 +7,8 @@ MsgBox ("1. 在工作表【设置】中输入新添加的桥名及其梁板总�
 End Sub
 
 Sub counter()
-
-
+    
 '录入桥梁名称及梁板数量
-
 last_row = Sheets("设置").Range("A65535").End(xlUp).Row
 
 '将完成率区域设置未无填充
@@ -18,7 +16,7 @@ Sheets("设置").Range(Cells(1, 4), Cells(last_row, 4)).Interior.Pattern = xlNon
 
 
 If Sheets("设置").Cells(last_row, 1) = "总计" Then
-    Rows(last_row).Delete
+    Rows(last_row).Delete'将不同情形标准化处理
     last_row = Sheets("设置").Range("A65535").End(xlUp).Row
     n = last_row - 1 'n为桥梁数量
     num (n)
