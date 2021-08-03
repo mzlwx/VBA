@@ -28,14 +28,14 @@ For i = 1 To n
         Sheets("模板").Range(Cells(7, 2), Cells(11, 10)) = ""
         Sheets("模板").Range(Cells(7, 2), Cells(7, 10)).UnMerge
         Sheets("模板").Range(Cells(7, 2), Cells(7, 10)).Font.Underline = xlUnderlineStyleNone
-        Sheets("模板").Range(Cells(7, 2), Cells(7, 2 + x)).Merge
+        Sheets("模板").Range(Cells(7, 2), Cells(7, 3 + x)).Merge
         Sheets("模板").Cells(7, 2) = data(i, 2)
         
         '加下划线
-        Sheets("模板").Range(Cells(7, 2), Cells(7, 2 + x)).Font.Underline = xlUnderlineStyleSingle
+        Sheets("模板").Range(Cells(7, 2), Cells(7, 3 + x)).Font.Underline = xlUnderlineStyleSingle
         
-        Sheets("模板").Range(Cells(7, 3 + x), Cells(7, 10)).Merge
-        Sheets("模板").Cells(7, 3 + x) = ",请予审查和批准。"
+        Sheets("模板").Range(Cells(7, 4 + x), Cells(7, 10)).Merge
+        Sheets("模板").Cells(7, 4 + x) = ",请予审查和批准。"
 
         
         '附件1
@@ -61,7 +61,7 @@ For i = 1 To n
         Sheets("模板").Range(Cells(7, 2), Cells(11, 10)).Font.Name = "宋体"
         Sheets("模板").Range(Cells(7, 2), Cells(11, 10)).Font.Size = 12
         Sheets("模板").Range(Cells(7, 2), Cells(9, 10)).HorizontalAlignment = xlHAlignLeft
-        Sheets("模板").Range(Cells(7, 2), Cells(7, 3 + x)).HorizontalAlignment = xlHAlignLeft
+Sheets("模板").Range(Cells(7, 2), Cells(7, 3 + x)).HorizontalAlignment = xlHAligncenter
         
 
 
